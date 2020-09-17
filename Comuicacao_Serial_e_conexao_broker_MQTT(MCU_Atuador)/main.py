@@ -10,6 +10,7 @@ import serial                   # importar biblioteca para comunicacao serial
 import paho.mqtt.client as mqtt # importar cliente MQTT
 import sys
 
+
 #----------------------------------------------------------------------------#
 #DEFINICOES:
 #-> MQTT:
