@@ -60,7 +60,7 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 void move_step_motor(int*modo)
 {
-	if(modo == horario)
+	if(*modo == horario)
 	{
 // Deslocamento bit a bit para esqueda , ativando as bobinas do motor individualmente em sequencia
 		nibble_motor = nibble_motor<<1;
@@ -70,7 +70,7 @@ void move_step_motor(int*modo)
 		GPIOC->ODR |= nibble_motor;
 
 	}
-	else if(modo == anti_horario) // Deslocamento bit a bit para direita
+	else if(*modo == anti_horario) // Deslocamento bit a bit para direita
 	{
 		nibble_motor = nibble_motor>>1;
 		if(nibble_motor == 0b0001) nibble_motor = 0b1000;
