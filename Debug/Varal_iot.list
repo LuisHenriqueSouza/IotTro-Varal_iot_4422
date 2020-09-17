@@ -544,7 +544,7 @@ void move_step_motor(int*modo)
  8000632:	005b      	lsls	r3, r3, #1
  8000634:	4a20      	ldr	r2, [pc, #128]	; (80006b8 <move_step_motor+0x98>)
  8000636:	6013      	str	r3, [r2, #0]
-		if(nibble_motor == 0b1000) nibble_motor = 0b0001; // criacao do loop das bobinas
+		if(nibble_motor == 0b1000) nibble_motor = 0b0001;
  8000638:	4b1f      	ldr	r3, [pc, #124]	; (80006b8 <move_step_motor+0x98>)
  800063a:	681b      	ldr	r3, [r3, #0]
  800063c:	2b08      	cmp	r3, #8
