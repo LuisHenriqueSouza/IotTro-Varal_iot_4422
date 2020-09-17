@@ -39,7 +39,7 @@
 
 #define TAM_MSG 60 //! Tamanho maximo do buffer serial
 #define TOUT_SERIAL 100 //! Timeout transmissão serial
-enum{ imovel = 0,horario, anti_horario};
+enum{imovel = 0,horario, anti_horario};
 
 /* USER CODE END PD */
 
@@ -64,7 +64,7 @@ void move_step_motor(int*modo)
 	{
 // Deslocamento bit a bit para esqueda , ativando as bobinas do motor individualmente em sequencia
 		nibble_motor = nibble_motor<<1;
-		if(nibble_motor == 0b1000) nibble_motor = 0b0001;
+		if(nibble_motor == 0b1000) nibble_motor = 0b0001; // criacao do loop das bobinas
 
 		GPIOC->ODR &=~ nibble_motor;
 		GPIOC->ODR |= nibble_motor;
